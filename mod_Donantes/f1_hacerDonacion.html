@@ -21,11 +21,10 @@
 </head>
 <body>
     <header>
-        <!--aquí va todo del header-->
         <a href="#" id="ocultar-aside"><i></i></a>
     </header>
     <main>
-        <!--Aquí va el contenido-->
+        <!--contenido-->
     <div class="container">
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
@@ -38,10 +37,10 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label">Nombre completo</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="firstName" placeholder="primer nombre" />
+                            <input type="text" class="form-control" name="firstName" placeholder="nombres" />
                         </div>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="lastName" placeholder="primer apellido" />
+                            <input type="text" class="form-control" name="lastName" placeholder="Apellidos" />
                         </div>
                     </div>
 
@@ -199,7 +198,35 @@ $(document).ready(function() {
 });
 
 </script>
-    </main>
+
+<script>      
+        function solonumeros(e){
+            key=e.keyCode || e.which ;
+            teclado=String.fromCharCode(key) ;
+            numeros="0123456789";
+            especiales="8-37-38-46";
+            teclado_especial=false ;
+
+            for(var i in especiales){
+                if(key==especiales){
+                teclado_especial=true} } 
+              if(numeros.indexOf(teclado)==-1 && !teclado_especial){ return false;}    }   
+</script>
+
+ <script>
+   function sololetras(e){
+            key=e.keyCode || e.which ;
+            teclado=String.fromCharCode(key) ;
+            letras="abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+            especiales="8-37-38-46";
+            teclado_especial=false ;
+            for(var i in especiales){
+                if(key==especiales){
+                    teclado_especial=true} }
+            if(letras.indexOf(teclado)==-1 && !teclado_especial){ return false; } }
+ </script>
+
+</main>
     <aside>
     <!--aquí va todo de la barra lateral-->
         <div class="foto-perfil">
