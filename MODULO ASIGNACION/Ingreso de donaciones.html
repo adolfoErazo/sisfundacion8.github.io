@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>ASIGNACION</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="imgs/asignacion.png">
+    <link rel="Shortcut Icon" type="image/x-icon" href="img/mano.jpg">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/posiciones.css">
+    
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <script src="js/sweetalert.min.js"></script>
+
+    <script src="js/jquery-1.12.2.min.js"></script>
+    
+
+</head>
+<body>
+    <header>
+        <a href="#" id="ocultar-aside"><i></i></a>
+        <!--aquí va todo del header-->
+    </header>
+    <main>
+        <!--Aquí va el contenido-->
+         
+        <br><script type="text/javascript" src="js/amcharts.js"></script>
+        <script type="text/javascript" src="js/serial.js"></script>
+        
+
+        
+        <script type="text/javascript">
+            AmCharts.makeChart("chartdiv",
+                {
+                    "type": "serial",
+                    "categoryField": "category",
+                    "angle": 40,
+                    "depth3D": 40,
+                    "colors": [
+                        " #34495e",
+                        "#FCD202",
+
+                    ],
+                    "startDuration": 1,
+                    "color": "#34495e",
+                    "handDrawScatter": 1,
+                    "theme": "default",
+                    "categoryAxis": {
+                        "gridPosition": "start"
+                    },
+                    "trendLines": [],
+                    "graphs": [
+                        {
+                            "balloonText": "[[title]]  [[category]]:[[value]]",
+                            "fillAlphas": 1,
+                            "id": "AmGraph-1",
+                            "title": "2015",
+                            "type": "column",
+                            "valueField": "column-1"
+                        },
+                        {
+                            "balloonText": "[[title]]  [[category]]:[[value]]",
+                            "fillAlphas": 1,
+                            "id": "AmGraph-2",
+                            "title": "2016",
+                            "type": "column",
+                            "valueField": "column-2"
+                        }
+                    ],
+                    "guides": [],
+                    "valueAxes": [
+                        {
+                            "id": "ValueAxis-1",
+                            "title": "Reporte donaciones año 2015 - 2016"
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {},
+                    "legend": {
+                        "enabled": true,
+                        "useGraphSettings": true
+                    },
+                    "titles": [
+                        {
+                            "id": "Title-1",
+                            "size": 18,
+                            "text": "Sisfundación"
+                        }
+                    ],
+                    "dataProvider": [
+                        {
+                            "category": "Enero - Abril",
+                            "column-1": 6,
+                            "column-2": 8
+                        },
+                        {
+                            "category": "Mayo - Agosto",
+                            "column-1": 1,
+                            "column-2": 4.5
+                        },
+                        {
+                            "category": "Septiembre - Diciembre",
+                            "column-1": 7.5,
+                            "column-2": 9
+                        }
+                    ]
+                }
+            );
+        </script>
+    </head>
+    <body>
+        <div id="chartdiv" style="width: 100%; height: 600px; background-color: #FFFFFF;" ></div>
+    </body>
+    </main>
+    <aside>
+    <!--aquí va todo de la barra lateral-->
+        <div class="foto-perfil">
+            <div class="imagen">
+            <img src="imgs/asignacion.png">
+            </div>
+        </div>
+        <div class="menu-aside">
+            <a href="index.html">Inicio</a>
+            <a href="Consultar recursos.html">Consultar recursos</a>
+            <a href="Asignar donaciones.html">Asignar donaciones</a>
+            <a href="Registrar ingreso de donaciones.html">Registrar ingreso de donaciones</a>
+            <a href="Ingreso de donaciones.html">Ingreso de donaciones</a>
+            <a href="Crear hojas de vida por familia.html">Crear hojas de vida por familia</a>
+            <a href="#" id="salir">Cerrar sesión</a>
+        </div>
+    </aside>
+ 
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#ocultar-aside').on('click', function(){
+                $('aside').toggleClass('aside, aside-toggle');
+                $('main').toggleClass('main, main-toggle');
+            });
+        });
+    </script>
+    <script>
+$().ready(function(){
+    $('#salir').click(function(){
+swal({   title: "Desea cerrar sesión ?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../login2.html");  } else {     swal("Cancelado", " ", "error");   }
+ });
+ });
+ });
+</script>
+
+</body>
+</html>

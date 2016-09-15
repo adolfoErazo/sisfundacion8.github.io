@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>SISFUNDACIÓN</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="imgs/mano.jpg">
+    <link rel="stylesheet" href="../css/posiciones.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/formValidation.min.css">
+
+</head>
+<body>
+    <header>
+        <!--aquí va todo del header-->
+        <a href="#" id="ocultar-aside"><i></i></a>
+    </header>
+    <main>
+        <!--Aquí va el contenido-->
+        <div class="container">
+    <div class="row">
+        <form id="contactForm" class="form-horizontal">
+    <div class="form-group">
+        <br>
+        <center><h2>Eliminar cuentas de usuario</h2>
+        <hr>
+        <label class="col-xs-2 control-label">Nombre completo</label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" name="firstName" placeholder="Nombres" />
+        </div>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" name="lastName" placeholder="Apellidos" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Documento de Identidad #</label>
+        <div class="col-xs-5">
+            <input type="number" class="form-control" name="numDocumento" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Nombre de usuario</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="tipoDocumento" />
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Correo electrónico</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="email" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-9 col-xs-offset-3">
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+    </div>
+</form>
+    </div>
+</div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/formValidation.min.js"></script>
+    <script src="../js/bootstrap_validation.min.js"></script>
+
+    </main>
+    <aside>
+    <!--aquí va todo de la barra lateral-->
+       <div class="foto-perfil">
+            <div class="imagen">
+            <img src="../imgs/img_administrador.png">
+            </div>
+        </div>
+        <div class="menu-aside">
+            <a href="../Inicio.html">SISFUNDACIÓN</a>
+            <a href="index administracion.html">Módulo administración</a>
+            <a href="crear.html">Crear cuentas de usuario</a>
+            <a href="modificar.html">Modificar cuentas de usuario</a>
+            <a href="eliminar.html">Eliminar cuentas de usuario</a>
+            <a href="reporte.html">Reporte estadistica de donaciones</a>
+            <a href="reporte2.html">Reporte gestión de donantes</a>
+            <a href="../login2.html">Cerrar sesión</a>
+        </div>
+    </aside>
+ 
+    <script src="../js/jquery-1.12.2.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/formValidation.min.js"></script>
+    <script src="../js/bootstrap_validation.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('#ocultar-aside').on('click', function(){
+                $('aside').toggleClass('aside, aside-toggle');
+                $('main').toggleClass('main, main-toggle');
+            });
+        });
+    </script>
+</body>
+</html>

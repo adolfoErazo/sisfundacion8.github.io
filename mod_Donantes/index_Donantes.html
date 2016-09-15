@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>SISFUNDACIÓN</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="imgs/mano.jpg">
+    <link rel="stylesheet" href="../css/posiciones.css">
+</head>
+<body>
+    <header>
+        <!--aquí va todo del header-->
+        <a href="#" id="ocultar-aside"><i></i></a>
+    </header>
+    <main>
+        <!--Aquí va el contenido-->
+        <center><h2>Este rol permite  al donante reportar sus donaciones monetarias, así como vincularse al programa "Apadrina un niño". <br>Si ya es donante puede solicitar su certificado de donación</strong></p></p></center></h2>
+    </main>
+    <aside>
+    <!--aquí va todo de la barra lateral-->
+        <div class="foto-perfil">
+            <div class="imagen">
+            <img src="../imgs/img_administrador.png">
+            </div>
+        </div>
+        <div class="menu-aside">
+            <a href="../Inicio.html">SISFUNDACIÓN</a>
+            
+            <a href="index_Donantes.html">Módulo Donaciones</a>
+            <a href="hacerDonacion.html">Registro de una donación</a>
+            
+            <a href="f2certificado_donantel">Generar Cetificado de donación</a>
+            
+            <a href="crear.html">Reporte pago de donación</a>
+            <a href="../login2.html">Cerrar sesión</a>
+        </div>
+    </aside>
+ 
+    <script src="../js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#ocultar-aside').on('click', function(){
+                $('aside').toggleClass('aside, aside-toggle');
+                $('main').toggleClass('main, main-toggle');
+            });
+        });
+    </script>
+</body>
+</html>

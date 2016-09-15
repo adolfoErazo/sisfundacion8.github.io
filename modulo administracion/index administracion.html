@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>SISFUNDACIÓN</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="imgs/mano.jpg">
+    <link rel="stylesheet" href="../css/posiciones.css">
+</head>
+<body>
+    <header>
+        <!--aquí va todo del header-->
+        <a href="#" id="ocultar-aside"><i></i></a>
+    </header>
+    <main>
+        <!--Aquí va el contenido-->
+        <br>
+        <h3><center>Bienvenido "Administrador" <br> Este rol permite la administración de cuentas de usuario del sistema y la gestión de reportes.</strong></p></center></p></center></h3>
+        <hr>
+<div class="container-fluid">
+    <div class="row">
+        <img class="imgs-responsive" src="../imgs/people-q-c-600-200-1.jpg">       
+    </main>
+    <aside>
+    <!--aquí va todo de la barra lateral-->
+       <div class="foto-perfil">
+            <div class="imagen">
+            <img src="../imgs/img_administrador.png">
+            </div>
+        </div>
+        <div class="menu-aside">
+            <a href="../Inicio.html">SISFUNDACIÓN</a>
+            <a href="index administracion.html">Módulo administración</a>
+            <a href="crear.html">Crear cuentas de usuario</a>
+            <a href="modificar.html">Modificar cuentas de usuario</a>
+            <a href="eliminar.html">Eliminar cuentas de usuario</a>
+            <a href="reporte.html">Reporte estadistica de donaciones</a>
+            <a href="reporte2.html">Reporte gestión de donantes</a>
+            <a href="../login2.html">Cerrar sesión</a>
+        </div>
+    </aside>
+ 
+    <script src="../js/jquery-1.12.2.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/formValidation.min.js"></script>
+    <script src="../js/bootstrap_validation.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('#ocultar-aside').on('click', function(){
+                $('aside').toggleClass('aside, aside-toggle');
+                $('main').toggleClass('main, main-toggle');
+            });
+        });
+    </script>
+</body>
+</html>
