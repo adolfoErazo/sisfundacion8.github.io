@@ -41,19 +41,18 @@ function confirmacionPass(){
     }       
 
     if (usuario=="donante2@gmail.com") { 
-        if (password=="4321") {
-            window.location="../mod_Donantes/index_Donantes.html";
         }
         if (password!="4321") {
             alert('Error: verifique que su correo y contraseña sea correcta')
+        if (password=="4321") {
+            window.location="file:///C:/Users/Personal/Documents/GitHub/sisfundacion8.github.io/mod_Donantes/index_Donantes.html"
         }
     } 
 
     if (usuario=="directivo3@gmail.com") { 
         if (password=="7890") {
-            window.location="../MODULO ASIGNACION/index.html";
-        }
-    if (password!="7890") {
+            window.location="file:///C:/Users/Personal/Documents/GitHub/sisfundacion8.github.io/MODULO%20ASIGNACION/index.html"
+            if (password!="7890") {
             alert('Error: verifique que su correo y contraseña sea correcta')
         }
     } 
