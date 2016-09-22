@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title> DONANTES</title>
+     <link rel="Shortcut Icon" type="image/x-icon" href="imgs/mano.jpg">
+
+       <link rel="stylesheet" href="../css/bootstrap.min.css">
+       <link rel="stylesheet" href="../css/posiciones.css">     
+       <link rel="stylesheet" href="../css/sweetalert.css">
+
+       <script src="../js/jquery-1.12.2.min.js"> </script>
+       <script src="../js/sweetalert.min.js"> </script>
+
+</head>
+
+
+<body>
+    <header>
+        <a href="#" id="ocultar-aside"><i></i></a>
+    </header>
+
+<!-- contenido -->
+    <main>
+        <br><br> <justify><h2>Este rol permite  al donante reportar sus donaciones monetarias, así como vincularse al programa "Apadrina un niño". <br>Si ya es donante puede solicitar su certificado de donación</strong></p></p></justify></h2>
+    
+	<center>   <img class="imgs-responsive" src="../imgs/corazon.jpg"> </center>
+    
+    </main>
+             <!--barra lateral-->
+<aside>
+ <div class="foto-perfil">  <div class="imagen">
+   <img src="../imgs/dote.png"> </div>
+ </div>
+   <div class="menu-aside">
+   
+    <a href="registDonacionArticulof1.html"> Registre su donación </a>   
+    <a href="certificadoDonantef3.html"> Certificado como Donante</a>
+    <a href="cargarDcnMonetariaF2.html">Registre donación monetaria </a>
+
+    <a id="salir" href="#">Cerrar sesión</a>    </div>
+</aside>
+ 
+<script> 
+swal("Bienvenidos, Modulo Donantes")
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#ocultar-aside').on('click', function(){
+                $('aside').toggleClass('aside, aside-toggle');
+                $('main').toggleClass('main, main-toggle');
+            });
+        });
+    </script>
+
+<script>
+$().ready(function(){
+    $('#salir').click(function(){
+swal({   title: "Desea cerrar sesión ?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../Inicio.html");  } else { swal("Cancelado", " ", "error");   }
+ });
+ });
+ });
+</script>
+
+</body>
+</html>
+   

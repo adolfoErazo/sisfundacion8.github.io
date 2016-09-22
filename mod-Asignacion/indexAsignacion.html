@@ -14,8 +14,6 @@
     <script src="../js/jquery-1.12.2.min.js"></script>
     
     <script src="../js/sweetalert.min.js"></script>
-    
-
 
 </head>
 <body>
@@ -36,20 +34,23 @@
             </div>
         </div>
         <div class="menu-aside">
-            <a href="index.html">Inicio</a>
+
             <a href="Consultar recursos.html">Consultar recursos</a>
             <a href="Asignar donaciones.html">Asignar donaciones</a>
             <a href="Registrar ingreso de donaciones.html">Registrar ingreso de donaciones</a>
             <a href="Ingreso de donaciones.html">Ingreso de donaciones</a>
+
             <a href="Crear hojas de vida por familia.html">Crear hojas de vida por familia</a>
+
             <a id="salir" href="#">Cerrar sesión</a>
 
         </div>
     </aside>
  
 <script> 
-swal("BIENVENIDOS AL MODULO DE ASIGNACIÓN")
+swal("Bienvendos Modulo Asignación")
     </script>
+
     <script type="text/javascript">
         $(document).ready(function(){
             $('#ocultar-aside').on('click', function(){
@@ -58,9 +59,8 @@ swal("BIENVENIDOS AL MODULO DE ASIGNACIÓN")
             });
         });
     </script>
+
 <script>
-
-
 $().ready(function(){
     $('#salir').click(function(){
 swal({   title: "Desea cerrar sesión ?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../Inicio.html");  } else { swal("Cancelado", " ", "error");   }
