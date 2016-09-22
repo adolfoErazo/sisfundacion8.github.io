@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>ASIGNACION</title>
-    <link rel="Shortcut Icon" type="image/x-icon" href="imgs/asignacion.png">
-    <link rel="stylesheet" href="css/posiciones.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="Shortcut Icon" type="image/x-icon" href="../imgs/asignacion.png">
+    <link rel="stylesheet" href="../css/posiciones.css">
+    <link rel="stylesheet" href="../css/estilos.css">
     
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/formValidation.min.css">
-     <link rel="stylesheet" href="css/sweetalert.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/formValidation.min.css">
+     <link rel="stylesheet" href="../css/sweetalert.css">
 
-  <script src="js/sweetalert.min.js"></script>
+  <script src="../js/sweetalert.min.js"></script>
 
 </head>
 <body>
@@ -43,7 +43,8 @@
                     </div>
         <label class="col-xs-3 control-label">Nombres</label>
         <div class="col-xs-4">
-            <input type="text" class="form-control" name="firstName" placeholder="Nombres" onkeypress="return sololetras(event)" onpaste="return false"/>
+            
+	<input type="text" class="form-control" name="firstName" placeholder="Nombres" onkeypress="return sololetras(event)" onpaste="return false"/>
         </div>
     </div>
         <div class="form-group">
@@ -86,8 +87,8 @@
 
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <script src="js/formValidation.min.js"></script>
     <script src="js/bootstrap_validation.min.js"></script>
@@ -192,7 +193,8 @@ $(document).ready(function() {
         });
 });
 </script>   
-        <script>      
+        
+<script>      
         function solonumeros(e){
             key=e.keyCode || e.which ;
             teclado=String.fromCharCode(key) ;
@@ -202,41 +204,36 @@ $(document).ready(function() {
 
             for(var i in especiales){
                 if(key==especiales){
-                    teclado_especial=true;}
+                teclado_especial=true;}
             }
-   if(numeros.indexOf(teclado)==-1 && !teclado_especial){ return false;}
+   			  if(numeros.indexOf(teclado)==-1 && !teclado_especial){ return false;}
         }
     </script>
-            <script>
+
+
+    <script>
         function sololetras(e){
             key=e.keyCode || e.which ;
-
             teclado=String.fromCharCode(key) ;
-
             letras="abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
-
             especiales="8-37-38-46";
-
             teclado_especial=false ;
-
             for(var i in especiales){
-
                 if(key==especiales){
-                    teclado_especial=true;
-                }
-            }
+                    teclado_especial=true} }
 
-            if(letras.indexOf(teclado)==-1 && !teclado_especial){
-                return false; 
-            }
+            if(letras.indexOf(teclado)==-1 && !teclado_especial){ return false; }
         }
+    
     </script>
+    
     </main>
+    
     <aside>
     <!--aquí va todo de la barra lateral-->
         <div class="foto-perfil">
             <div class="imagen">
-            <img src="imgs/asignacion.png">
+            <img src="../imgs/asignacion.png">
             </div>
         </div>
         <div class="menu-aside">
@@ -246,16 +243,17 @@ $(document).ready(function() {
             <a href="Registrar ingreso de donaciones.html">Registrar ingreso de donaciones</a>
             <a href="Ingreso de donaciones.html">Ingreso de donaciones</a>
             <a href="Crear hojas de vida por familia.html">Crear hojas de vida por familia</a>
-            <a href="#" id="salir">Cerrar sesión</a>
+            <a id="salir" href="#">Cerrar sesión</a>
+
         </div>
     </aside>
  
-    <script src="js/jquery-1.12.2.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/jquery-1.12.2.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
-    <script src="js/formValidation.min.js"></script>
-    <script src="js/bootstrap_validation.min.js"></script>
+    <script src="../js/formValidation.min.js"></script>
+    <script src="../js/bootstrap_validation.min.js"></script>
 
     <script type="text/javascript">
 
@@ -270,7 +268,7 @@ $(document).ready(function() {
 <script>
 $().ready(function(){
     $('#salir').click(function(){
-swal({   title: "Desea cerrar sesión ?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../login2.html");  } else {     swal("Cancelado", " ", "error");   }
+swal({   title: "Desea cerrar sesión ?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../Inicio.html");  } else {     swal("Cancelado", " ", "error");   }
  });
  });
  });

@@ -33,7 +33,7 @@ function confirmacionPass(){
 
     if (usuario=="admin1@gmail.com") { 
         if (password=="123") {
- window.location="file:///C:/Users/Personal/Documents/FASE%20III/Sisfundacion%20v6/modulo%20administracion/index administracion.html";
+ window.location="file:///C:/Users/Personal/Documents/FASE%20III/Sisfundacion%20v8/modulo%20administracion/index administracion.html";
         }
         if (password!="123") {
             alert('Error: verifique que su correo y contraseña sea correcta')
@@ -41,25 +41,26 @@ function confirmacionPass(){
     }       
 
     if (usuario=="donante2@gmail.com") { 
+        if (password=="4321") {
+            window.location="file:///C:/Users/Personal/Documents/FASE%20III/Sisfundacion%20v8/mod_Donantes/index_Donantes.html";
         }
         if (password!="4321") {
             alert('Error: verifique que su correo y contraseña sea correcta')
-        if (password=="4321") {
-            window.location="file:///C:/Users/Personal/Documents/GitHub/sisfundacion8.github.io/mod_Donantes/index_Donantes.html"
         }
     } 
 
     if (usuario=="directivo3@gmail.com") { 
         if (password=="7890") {
-            window.location="file:///C:/Users/Personal/Documents/GitHub/sisfundacion8.github.io/MODULO%20ASIGNACION/index.html"
-            if (password!="7890") {
+            window.location="file:///C:/Users/Personal/Documents/FASE%20III/Sisfundacion%20v8/MODULO%20ASIGNACION/index.html";
+        }
+    if (password!="7890") {
             alert('Error: verifique que su correo y contraseña sea correcta')
         }
     } 
 
 // validacion si no es ningun de los userrs
-    if (usuario!="admin1@gmail.com" && usuario!="donante2@gmail.com"
-    	&& usuario!="directivo3@gmail.com")  {
+    if (usuario!="admin1@gmail.com" && usuario!="donante2@gmail.com"&& usuario!="directivo3@gmail.com")  
+    {
         if(password!=""){
             alert('ERROR: Usuario incorrecto')
         }

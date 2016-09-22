@@ -14,36 +14,55 @@
     </header>
     <main>
         <!--Aquí va el contenido-->
-        <center><h2>Este rol permite  al donante reportar sus donaciones monetarias, así como vincularse al programa "Apadrina un niño". <br>Si ya es donante puede solicitar su certificado de donación</strong></p></p></center></h2>
+        <justify><h2>Este rol permite  al donante reportar sus donaciones monetarias, así como vincularse al programa "Apadrina un niño". <br>Si ya es donante puede solicitar su certificado de donación</strong></p></p></justify></h2>
+    
+	    <center>   <img class="imgs-responsive" src="imgs/corazon.jpg">     </center>
+    
     </main>
     <aside>
     <!--aquí va todo de la barra lateral-->
         <div class="foto-perfil">
             <div class="imagen">
-            <img src="../imgs/img_administrador.png">
+            <img src="imgs/asignacion.png">
             </div>
         </div>
         <div class="menu-aside">
-            <a href="../Inicio.html">SISFUNDACIÓN</a>
+            <a href="../Inicio.html"> Página Web Fundación</a>
             
             <a href="index_Donantes.html">Módulo Donaciones</a>
-            <a href="hacerDonacion.html">Registro de una donación</a>
             
-            <a href="f2certificado_donantel">Generar Cetificado de donación</a>
+            <a href="donacionArticulo.html"> Realize una donación </a>
             
-            <a href="crear.html">Reporte pago de donación</a>
-            <a href="../login2.html">Cerrar sesión</a>
+            <a href="certificado_donante.html">Generar Cetificado de una  donación económica </a>
+            
+            <a href="cargar_donacionMonetaria.html"> Registre sus aportes enonómicos</a>
+
+            <a href="../login.html" id="salir"> Salir </a>
+           
         </div>
     </aside>
  
-    <script src="../js/jquery-1.12.2.min.js"></script>
+     <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap_validation.min.js"></script>
+
     <script type="text/javascript">
-        $(document).ready(function(){
+
+    $(document).ready(function(){
             $('#ocultar-aside').on('click', function(){
                 $('aside').toggleClass('aside, aside-toggle');
                 $('main').toggleClass('main, main-toggle');
             });
         });
     </script>
+    <script>
+$().ready(function(){
+    $('#salir').click(function(){
+swal({   title: "Desea cerrar sesión ?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../login.html");  } else {     swal("Cancelado", " ", "error");   }
+ });
+ });
+ });
+</script>
 </body>
 </html>

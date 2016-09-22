@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>SISFUNDACIÓN</title>
-    <link rel="Shortcut Icon" type="image/x-icon" href="imgs/mano.jpg">
+     <link rel="Shortcut Icon" type="image/x-icon" href="../imgs/img_administrador.png">
     <link rel="stylesheet" href="../css/posiciones.css">
     <link rel="stylesheet" href="../css/estilos.css">
+       <link rel="stylesheet" href="../css/sweetalert.css">
+
+    <script src="../js/sweetalert.min.js"></script>
 </head>
 <body>
     <header>
@@ -15,18 +18,10 @@
     </header>
     <main>
         <!--Aquí va el contenido-->
-                  <head>
-        
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>amCharts examples</title>
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <script src="../amcharts/amcharts.js" type="text/javascript"></script>
-        <script src="../amcharts/serial.js" type="text/javascript"></script>
+      <head>
+               
+        <script src="../js/amcharts.js" type="text/javascript"></script>
+        <script src="../js/serial.js" type="text/javascript"></script>
         <script>
             var chart;
 
@@ -119,9 +114,9 @@
         </script>
     </head>
 
-    <body>
+    
         <div id="chartdiv" style="width:80%; height:500px;"></div>
-    </body>
+
 
     </main>
     <aside>
@@ -132,14 +127,13 @@
             </div>
         </div>
         <div class="menu-aside">
-            <a href="../Inicio.html">SISFUNDACIÓN</a>
             <a href="index administracion.html">Módulo administración</a>
             <a href="crear.html">Crear cuentas de usuario</a>
             <a href="modificar.html">Modificar cuentas de usuario</a>
             <a href="eliminar.html">Eliminar cuentas de usuario</a>
             <a href="reporte.html">Reporte estadistica de donaciones</a>
             <a href="reporte2.html">Reporte gestión de donantes</a>
-            <a href="../login2.html">Cerrar sesión</a>
+            <a id="salir" href="#">Cerrar sesión</a>
         </div>
     </aside>
  
@@ -159,5 +153,13 @@
             });
         });
     </script>
+            <script>
+$().ready(function(){
+    $('#salir').click(function(){
+swal({   title: "Desea cerrar sesión ?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../Inicio.html");  } else {     swal("Cancelado", " ", "error");   }
+ });
+ });
+ });
+</script>
 </body>
 </html>

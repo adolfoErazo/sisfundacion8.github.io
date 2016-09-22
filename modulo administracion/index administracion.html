@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>SISFUNDACIÓN</title>
-    <link rel="Shortcut Icon" type="image/x-icon" href="imgs/mano.jpg">
+    <link rel="Shortcut Icon" type="image/x-icon" href="../imgs/img_administrador.png">
     <link rel="stylesheet" href="../css/posiciones.css">
+     <link rel="stylesheet" href="css/font-awesome.css">
+   <link rel="stylesheet" href="../css/sweetalert.css">
+
+    <script src="../js/sweetalert.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -19,7 +24,7 @@
         <hr>
 <div class="container-fluid">
     <div class="row">
-        <img class="imgs-responsive" src="../imgs/people-q-c-600-200-1.jpg">       
+        <img class="imgs-responsive" src="../imgs/people-q-c-600-200-1.jpg" width="100%" height="100%">       
     </main>
     <aside>
     <!--aquí va todo de la barra lateral-->
@@ -29,14 +34,13 @@
             </div>
         </div>
         <div class="menu-aside">
-            <a href="../Inicio.html">SISFUNDACIÓN</a>
             <a href="index administracion.html">Módulo administración</a>
             <a href="crear.html">Crear cuentas de usuario</a>
             <a href="modificar.html">Modificar cuentas de usuario</a>
             <a href="eliminar.html">Eliminar cuentas de usuario</a>
             <a href="reporte.html">Reporte estadistica de donaciones</a>
             <a href="reporte2.html">Reporte gestión de donantes</a>
-            <a href="../login2.html">Cerrar sesión</a>
+            <a id="salir" href="#">Cerrar sesión</a>
         </div>
     </aside>
  
@@ -56,5 +60,13 @@
             });
         });
     </script>
+        <script>
+$().ready(function(){
+    $('#salir').click(function(){
+swal({   title: "Desea cerrar sesión ?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../Inicio.html");  } else {     swal("Cancelado", " ", "error");   }
+ });
+ });
+ });
+</script>
 </body>
 </html>

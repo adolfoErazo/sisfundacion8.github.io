@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>SISFUNDACIÓN</title>
-    <link rel="Shortcut Icon" type="image/x-icon" href="imgs/mano.jpg">
+     <link rel="Shortcut Icon" type="image/x-icon" href="../imgs/img_administrador.png">
     <link rel="stylesheet" href="../css/posiciones.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/formValidation.min.css">
+   <link rel="stylesheet" href="../css/sweetalert.css">
 
+    <script src="../js/sweetalert.min.js"></script>
 </head>
 <body>
     <header>
@@ -36,7 +38,7 @@
     <div class="form-group">
         <label class="col-xs-3 control-label">Adicionar número telefónico</label>
         <div class="col-xs-5">
-            <input type="text" class="form-control" name="phoneNumber" />
+            <input type="text" class="form-control" name="phoneNumber" onkeypress="return solonumeros(event)" onpaste="return false" />
         </div>
     </div>
 
@@ -161,6 +163,32 @@ $(document).ready(function() {
 });
 </script>   
 
+<script>
+        
+        function solonumeros(e){
+            key=e.keyCode || e.which ;
+
+            teclado=String.fromCharCode(key) ;
+
+            numeros="0123456789";
+
+            especiales="8-37-38-46";
+
+            teclado_especial=false ;
+
+            for(var i in especiales){
+
+                if(key==especiales){
+                    teclado_especial=true;
+                }
+            }
+
+            if(numeros.indexOf(teclado)==-1 && !teclado_especial){
+                return false; 
+            }
+        }
+    </script>
+
     </main>
     <aside>
     <!--aquí va todo de la barra lateral-->
@@ -170,14 +198,14 @@ $(document).ready(function() {
             </div>
         </div>
         <div class="menu-aside">
-            <a href="../Inicio.html">SISFUNDACIÓN</a>
+
             <a href="index administracion.html">Módulo administración</a>
             <a href="crear.html">Crear cuentas de usuario</a>
             <a href="modificar.html">Modificar cuentas de usuario</a>
             <a href="eliminar.html">Eliminar cuentas de usuario</a>
             <a href="reporte.html">Reporte estadistica de donaciones</a>
             <a href="reporte2.html">Reporte gestión de donantes</a>
-            <a href="../login2.html">Cerrar sesión</a>
+            <a id="salir" href="#">Cerrar sesión</a>
         </div>
     </aside>
  
@@ -197,5 +225,13 @@ $(document).ready(function() {
             });
         });
     </script>
+            <script>
+$().ready(function(){
+    $('#salir').click(function(){
+swal({   title: "Desea cerrar sesión ?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../Inicio.html");  } else {     swal("Cancelado", " ", "error");   }
+ });
+ });
+ });
+</script>
 </body>
 </html>
