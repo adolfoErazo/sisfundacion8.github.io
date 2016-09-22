@@ -42,9 +42,13 @@
 	 placeholder="* Ingresar contraseña "> <br> <br>	
 		
 		<button class="enviar" id="button-primary" type="button"  onClick= EnviarUsuario()
-		value="Iniciar sesión">Iniciar Sesión</button> <br> <br>	
-		<br> <br>			
-		
+		value="Iniciar sesión">Iniciar Sesión</button> <br>	
+		<br> 		
+	
+<!--Vover no esta bien -->
+        <button class="enviar" id="button-primary" type="button"  onClick= Volver()>Volver al Inicio
+        <a href="index.html"> </button> </a> <br>
+
 		</li>
 			
 		</ul>
@@ -81,6 +85,7 @@
             window.location="mod-Asignacion/indexAsignacion.html"}
     if (password!="7890") {
             alert('Error: verifique que su correo y contraseña sea correcta') } } 
+
 // validacion si no es ningun de los userrs
     if (usuario!="admin1@gmail.com" && usuario!="donante2@gmail.com"&& usuario!="directivo3@gmail.com")  
     {
@@ -97,6 +102,11 @@
     }
 }	
 </script>
+
+<script>
+ function Volver() { href="index.html" }
+ </script>
+
 
 </html>
 
