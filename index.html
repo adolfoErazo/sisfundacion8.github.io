@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="Shortcut Icon" type="image/x-icon" href="imgs/mano.jpg">
     <meta name="viewport" content="width=device-width, user scalable=no, initial-scale=1.0, minimum-scale=1.0">
-    <title>SisFundación</title>
+    <title>SISFUNDACIÓN</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/formValidation.css"/>
@@ -47,7 +47,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="page-scroll">
-                        <a href="#"><i class="fa fa-home">&nbsp;</i>INICIO</a>
+                        <a href="#"><i class="fa fa-home">&nbsp; &nbsp;</i>INICIO</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#fundacion">FUNDACIÓN SAL DEL MUNDO</a>
@@ -56,7 +56,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" class="fuente"> Páginas De Error <span class="caret"></span></a>-->
                     </li>
                     <li class="page-scroll">
-                        <a> DOCUMENTACIÓN FASE III</a>
+                        <a href="mod_DocSena/indexDocumentacion.html">DOCUMENTACIÓN FASE III</a>
                     </li>
 
                     <li class="page-scroll">
@@ -106,7 +106,7 @@
             <div class="color1 col-xs-12 col-sm-6 col-md-3 text-justify">
             <p>
             <h3>¿Cómo lo hacemos?</h3>
-            VOLUNTARIADO. Para ser voluntario debe tener: Un firme compromiso con los valores y principios del voluntariado. * Capacidad para trabajar en un entorno multicultural. * Capacidad para adaptarse a condiciones de vida difíciles y sobre todo pasión por el servicio. Puede acompañarnos en una brigada y visitar la Fundación; recibimos donaciones: escolares, instrumentos musicales, libros, ropa, comida, medicamentos o llevar donaciones en dinero para suministros o mejór aun vincularse a nuestro programa de APADRINA UN NIÑO.
+            VOLUNTARIADO. Para ser voluntario debe tener: Un firme compromiso con los valores y principios del voluntariado, capacidad para trabajar en un entorno multicultural, capacidad para adaptarse a condiciones de vida difíciles y sobre todo pasión por el servicio. Puede acompañarnos en una brigada y visitar la Fundación; recibimos donaciones tales como: útiles escolares, instrumentos musicales, libros, ropa, comida, medicamentos o llevar donaciones en dinero para suministros o mejór aun vincularse a nuestro programa "APADRINA UN NIÑO".
             </p>
             </div>
             <div class="color 2 col-xs-12 col-sm-6 col-md-3 text-justify">
@@ -127,7 +127,8 @@
                 <div class="page-header">
                     <center><h1>TRANSFORMA VIDAS</h1></center>
                 </div>
-
+                <img class="imgs-responsive" src="imgs/logoSaldelMundo.png" alt=""
+                     style="width:400px; margin-left:180px; margin-bottom:30px">
                 <form id="contactForm" method="post" class="form-horizontal" action="target.php"
                       data-fv-message="This value is not valid"
                       data-fv-icon-valid="glyphicon glyphicon-ok"
@@ -136,10 +137,10 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Nombre completo<sup>*</sup></label>
                         <div class="col-lg-4">
-                            <input type="text" class="form-control" name="firstName" placeholder="Nombres" required data-fv-notempty-message="Su nombre es requerido" />
+                            <input type="text" class="form-control" name="firstName" placeholder="Nombres" required data-fv-notempty-message="Su nombre es requerido" onkeypress="return sololetras(event)"  onpaste="return false"/>
                         </div>
                         <div class="col-lg-4">
-                            <input type="text" class="form-control" name="lastName" placeholder="Apellidos" required data-fv-notempty-message="Su apellido es requerido" />
+                            <input type="text" class="form-control" name="lastName" placeholder="Apellidos" required data-fv-notempty-message="Su apellido es requerido" onkeypress="return sololetras(event)"  onpaste="return false" />
                         </div>
                     </div>
 
@@ -147,7 +148,7 @@
                         <label class="col-lg-3 control-label">Empresa o Profesión<sup>*</sup></label>
                         <div class="col-lg-5">
                             <input type="text" class="form-control" name="company"
-                                   required data-fv-notempty-message="El nombre de su compañia o profesión es requerido" />
+                                   required data-fv-notempty-message="El nombre de su compañia o profesión es requerido" onkeypress="return sololetras(event)"  onpaste="return false" />
                         </div>
                         <div class="col-lg-2">
                             <button type="button" class="btn btn-link" data-toggle="#jobInfo">Agregar más información</button>
@@ -159,7 +160,7 @@
                             <label class="col-lg-3 control-label">Cargo <sup>*</sup></label>
                             <div class="col-lg-5">
                                 <input type="text" class="form-control" name="job"
-                                       required data-fv-notempty-message="El cargo es requerido" />
+                                       required data-fv-notempty-message="El cargo es requerido" onkeypress="return sololetras(event)"  onpaste="return false" />
                             </div>
                         </div>
 
@@ -167,7 +168,7 @@
                             <label class="col-lg-3 control-label">Departamento <sup>*</sup></label>
                             <div class="col-lg-5">
                                 <input type="text" class="form-control" name="department"
-                                       required data-fv-notempty-message="El departamento o área no es requerido" />
+                                       required data-fv-notempty-message="El departamento o área no es requerido" onkeypress="return sololetras(event)"  onpaste="return false"/>
                             </div>
                         </div>
                     </div>
@@ -177,7 +178,7 @@
                         <div class="col-lg-5">
                             <input type="number" class="form-control" name="mobilePhone"
                                    required data-fv-notempty-message="El número telefónico es requerido"
-                                   data-fv-digits data-fv-digits-message="Los datos ingresados no son válidos" />
+                                   data-fv-digits data-fv-digits-message="Los datos ingresados no son válidos" onkeypress="return solonumeros(event)"  onpaste="return false"/>
                         </div>
                         <div class="col-lg-2">
                             <button type="button" class="btn btn-link" data-toggle="#phoneInfo">Agregar más números telefónicos</button>
@@ -189,7 +190,7 @@
                             <label class="col-lg-3 control-label">Teléfono casa</label>
                             <div class="col-lg-5">
                                 <input type="number" class="form-control" name="homePhone"
-                                       data-fv-digits data-fv-digits-message="Los datos ingresados no son válidos" />
+                                       data-fv-digits data-fv-digits-message="Los datos ingresados no son válidos" onkeypress="return solonumeros(event)"  onpaste="return false" />
                             </div>
                         </div>
 
@@ -197,7 +198,7 @@
                             <label class="col-lg-3 control-label">Teléfono oficina</label>
                             <div class="col-lg-5">
                                 <input type="number" class="form-control" name="officePhone"
-                                       data-fv-digits data-fv-digits-message="Los datos ingresados no son válidos" />
+                                       data-fv-digits data-fv-digits-message="Los datos ingresados no son válidos" onkeypress="return solonumeros(event)"  onpaste="return false"/>
                             </div>
                         </div>
                     </div>
@@ -213,6 +214,40 @@
         <!-- :form -->
     </div>
 </div>
+
+<script>      
+        function solonumeros(e){
+            key=e.keyCode || e.which ;
+            teclado=String.fromCharCode(key) ;
+            numeros="0123456789";
+            especiales="8-37-38-46";
+            teclado_especial=false ;
+
+            for(var i in especiales){
+                if(key==especiales){
+                teclado_especial=true;}
+            }
+              if(numeros.indexOf(teclado)==-1 && !teclado_especial){ return false;}
+        }
+    </script>
+
+
+    <script>
+        function sololetras(e){
+            key=e.keyCode || e.which ;
+            teclado=String.fromCharCode(key) ;
+            letras="abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+            especiales="8-37-38-46";
+            teclado_especial=false ;
+            for(var i in especiales){
+                if(key==especiales){
+                    teclado_especial=true} }
+
+            if(letras.indexOf(teclado)==-1 && !teclado_especial){ return false; }
+        }
+    
+    </script>
+
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -248,18 +283,6 @@ $(document).ready(function() {
         <li><a href="https://www.facebook.com/Fundacionsaldelmundo/#" class="btn-social btn-outline" title="Facebook"><i class="fa fa-facebook"></i></a>
         </li>
         </ul>
-
-
-
-
-
-
-
-
-
-
-
-
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Contáctenos:</h3>
@@ -273,12 +296,14 @@ $(document).ready(function() {
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Derechos de autor y copia. Grupo de Estudio ADSI - SENA 2016 
+                        Derechos de autor y copia. Grupo de Estudio SENA CSF - ADSI 2016 
                     </div>
                 </div>
             </div>
         </div>
+        <br>
     </footer>
+
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

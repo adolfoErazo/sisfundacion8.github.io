@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="Shortcut Icon" type="image/x-icon" href="imgs/mano.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Logeo Sifundacción</title>
+    <title>Login Sisfundación</title>
     <meta name="description">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/stylologin.css" rel="stylesheet">
-    <link rel="stylesheet" type="imagen/x-icon" href="imgs/mano.jpg">
-
+    
     <script src="js/validacionlogin.js" type="text/javascript"></script>    
     </head>
 
@@ -24,14 +24,14 @@
 			<h3 class="text-center text-primary"> 
 		    			<h3> <center>SISFUNDACIÓN </center></h3>
     
-			<justify> <medium><strong><p>Sistema de Información social que soporta la administración de donaciones en fundaciones, mejorando la gestión y control de estas ayudas, que son asignadas a familias vulnerables y así se refleja el uso y destino apropiado de aquellos recursos.</p></strong></medium> </justify>
+			<justify> <medium><strong><p>Sistema de Información social que soporta la administración de donaciones, para mejorar la gestión y destino apropiado de los recursos que son asignados a familias en condición de vulnerabilidad.</p></strong></medium> </justify>
 
 <div class="col-md-8 text-center"> <br> <br>
 	<fieldset>
 <form class="Form_Contacto" action="#" method="POST" name="usuariologin">
 		<ul>
 			
-			 <h2> <center> Iniciar sesión </center></h2>				
+			 <h2> <center> Inicio de sesión</center></h2>				
 				
 		<label for="email"></label>
 	<input id="email" class="input" type="email" value="" required="" 
@@ -42,12 +42,11 @@
 	 placeholder="* Ingresar contraseña "> <br> <br>	
 		
 		<button class="enviar" id="button-primary" type="button"  onClick= EnviarUsuario()
-		value="Iniciar sesión">Iniciar Sesión</button> <br>	
-		<br> 		
+		value="Iniciar sesión">Iniciar sesión</button> <br>	
+		<br><br><br>	
 	
-<!--Vover no esta bien -->
-        <button class="enviar" id="button-primary" type="button"  onClick= Volver()>Volver al Inicio
-        <a href="index.html"> </button> </a> <br>
+        <button type="submit" href="index.html" class="btn btn-primary btn-lg">Volver al inicio </button></a> <br>
+        
 
 		</li>
 			
@@ -63,7 +62,7 @@
 
     if (usuario=="admin1@gmail.com") { 
         if (password=="123") {
- window.location="modulo administracion/index administracion.html";
+ window.location="moduloAdministracion/index administracion.html";
         }
         if (password!="123") {
             alert('Error: verifique que su correo y contraseña sea correcta')
@@ -84,7 +83,7 @@
         if (password=="7890") {
             window.location="mod-Asignacion/indexAsignacion.html"}
     if (password!="7890") {
-            alert('Error: verifique que su correo y contraseña sea correcta') } } 
+            alert('Error: verifique que su correo y contraseña sean correctos') } } 
 
 // validacion si no es ningun de los userrs
     if (usuario!="admin1@gmail.com" && usuario!="donante2@gmail.com"&& usuario!="directivo3@gmail.com")  

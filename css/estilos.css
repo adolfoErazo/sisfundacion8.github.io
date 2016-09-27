@@ -9,52 +9,52 @@ body {
     
 }
 header{
-	background: #18bc9c
-	color: black;
+  background: #18bc9c
+  color: black;
 }
 .main {
-	background: #f2f2f2;
+  background: #f2f2f2;
 }
 .color {
-	background: #16a085;
-	color: #fff;
+  background: #16a085;
+  color: #fff;
 }
 aside{
-	background: #34495e;
-	color:#fff;
+  background: #34495e;
+  color:#fff;
 }
 footer{
-	background: #34495e;
-	color: #fff;
+  background: #34495e;
+  color: #fff;
 }
 
 li{
-	display: inline-block;
-	padding: 8px ;
-	margin: 3px;
+  display: inline-block;
+  padding: 8px ;
+  margin: 3px;
 }
 #uno{
-	background-color: #18bc9c;
-	float: right;
-	height: 655px;
+  background-color: #18bc9c;
+  float: right;
+  height: 655px;
 }
 #encabezado{
-	background-color: #18bc9c;
-	color: orange ;
-	height: 28px ;
-	font-size: 10px;
+  background-color: #18bc9c;
+  color: orange ;
+  height: 28px ;
+  font-size: 10px;
 }
 #primero{
-	background-color:;
-	}
+  background-color:;
+  }
 h2{
-	font-size: 15px ;
-	color: white;
+  font-size: 15px ;
+  color: white;
 }
 a{
-	text-decoration: none;
-	font-size: 16,5px ;
-	color: white ;
+  text-decoration: none;
+  font-size: 16,5px ;
+  color: white ;
 }
 .btn-outline { 
  margin-top: 15px; 
@@ -119,7 +119,7 @@ a{
 }
 
 .inicio-sesion-contenedor {
-  min-height: 630px;
+  min-height: 1200px;
   background: url(../imgs/home.jpg);
   background-size: cover; 
 }
