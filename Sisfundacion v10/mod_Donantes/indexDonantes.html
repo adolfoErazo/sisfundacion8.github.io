@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Módulo Donantes</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="../imgs/mano.jpg">
+
+       <link rel="stylesheet" href="../css/bootstrap.min.css">
+       <link rel="stylesheet" href="../css/posiciones.css">     
+       <link rel="stylesheet" href="../css/sweetalert.css">
+
+       <script src="../js/jquery-1.12.2.min.js"> </script>
+       <script src="../js/sweetalert.min.js"> </script>
+
+</head>
+
+
+<body>
+    <header>
+    <a href="#" id="ocultar-aside"><i></i></a>
+    </header>
+    <main>                            
+    <!--Aquí va el contenido-->
+        <ol class="breadcrumb">
+            <li><a href="../index.html">Inicio</a></li>
+            <li class="active">Módulo donantes</li>
+        </ol>   
+        <br><br> <center> <strong><h4>Este módulo permite al donante reportar sus donaciones en dinero o articulos. 
+        Sus aportes son valiosos y serviran de gran ayuda a familias y niños necesitados del país.<hr>Si requiere solicitar certificado de donación, puede hacerlo a través de la opción ¨Certificado donante¨ del menú.</strong></p></p></justify></strong></h4>
+        <br><br><br>
+	<center>   <img class="imgs-responsive" src="../imgs/corazon.jpg"> </center>
+    
+    </main>
+             <!--barra lateral-->
+<aside>
+ <div class="foto-perfil">  <div class="imagen">
+   <img src="../imgs/dote.png"> </div>
+ </div>
+   <div class="menu-aside">
+   <a href="indexDonantes.html"> Módulo donantes</a>
+   <a href="registDonacionArticulof1.html">Registrar donación en artículos</a>   
+   <a href="cargarDcnMonetariaF2.html">Registrar donación monetaria</a>
+   <a href="certificadoDonantef3.html">Certificado donante</a>
+   <a href="perfilBeneficiarios.html">Tus beneficiarios</a>
+   <a id="salir" href="#">Cerrar sesión</a>    
+   </div>
+</aside>
+ 
+<script> 
+swal("Bienvenidos al Módulo de donantes")
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#ocultar-aside').on('click', function(){
+                $('aside').toggleClass('aside, aside-toggle');
+                $('main').toggleClass('main, main-toggle');
+            });
+        });
+    </script>
+
+<script>
+$().ready(function(){
+    $('#salir').click(function(){
+swal({   title: "Desea cerrar sesión?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../index.html");  } else { swal("Cancelado", " ", "error");   }
+ });
+ });
+ });
+</script>
+
+</body>
+</html>
+   

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Documentación </title>
+     <link rel="Shortcut Icon" type="image/x-icon" href="../../imgs/mano.jpg">
+
+       <link rel="stylesheet" href="../../css/bootstrap.min.css">
+       <link rel="stylesheet" href="../../css/posiciones.css">     
+       <link rel="stylesheet" href="../../css/sweetalert.css">
+
+       <script src="../../js/jquery-1.12.2.min.js"> </script>
+       <script src="../../js/sweetalert.min.js"> </script>
+
+</head>
+
+
+<body>
+    <header>
+        <a href="#" id="ocultar-aside"><i></i></a>
+    </header>
+<main>
+<!-- Aquí va el contenido -->
+    <ol class="breadcrumb">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="indexDocumentacion.html">Documentación del sistema</a></li>
+            <li class="active">Fase 2</li>
+        </ol>
+  <br><br><br><br><br>
+         <center><ul>
+            <li><button><a target="_blank" href="Plantilla de analisis.pdf">Plantilla de analisís</a></button></li><br><hr>
+            <li><button><a target="_blank" href="INGENIERIA DEL SOFTWARE.pdf">Ingenieria del Software</a></button></li><br><hr>
+            <li><button><a href="Cronograma Y Presupuesto.xlsx">Emprendimiento</a></button></li><br><hr>
+     </ul> </center>
+    
+    </main>
+             <!--barra lateral-->
+<aside>
+ <div class="foto-perfil">  <div class="imagen">
+   <img src="../../imgs/instructor.png"> </div>
+   </div>
+   <div class="menu-aside">
+   
+    <a href="../FASE 1/fase1.html"> Fase 1</a>   
+    <a href="fase2.html"> Fase 2</a>
+    <a href="../FASE 3/fase3.html"> Fase 3 </a>
+
+    <a id="salir" href="#">Salir</a>    </div>
+</aside>
+
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#ocultar-aside').on('click', function(){
+                $('aside').toggleClass('aside, aside-toggle');
+                $('main').toggleClass('main, main-toggle');
+            });
+        });
+    </script>
+
+<script>
+$().ready(function(){
+    $('#salir').click(function(){
+swal({   title: "Desea salir ?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../../index.html");  } else { swal("Cancelado", " ", "error");   }
+ });
+ });
+ });
+</script>
+
+</body>
+</html>
+   

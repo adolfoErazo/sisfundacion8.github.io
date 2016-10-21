@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Apadrinamiento</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="../imgs/mano.jpg">
+    <link rel="stylesheet" href="../css/posiciones.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/formValidation.min.css">
+    <link rel="stylesheet" href="../css/sweetalert.css">
+    <script src="../js/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <header>
+    <a href="#" id="ocultar-aside"><i></i></a>
+    </header>
+    <main>                            
+    <!--Aquí va el contenido-->
+        <ol class="breadcrumb">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="index administracion.html">Módulo Donantes</a></li>
+            <li class="active">Tus beneficiarios</li>
+        </ol>   
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+                <h2> María Fernanda Díaz </h2>
+                <dt>
+                    Nombre del padre y ocupación:
+                </dt>
+                <dd>
+                    No sabe
+                </dd>
+                <dt>
+                    Nombre de la madre y ocupación:
+                </dt>
+                <dd>
+                    Johana Díaz
+                </dd>
+                <dd>
+                    Empleada doméstica
+                </dd>
+                <dt>
+                    Actividad favorita:
+                </dt>
+                <dd>
+                    Dibujar
+                </dd>
+                <dt>
+                    Deporte favorito:
+                </dt>
+                <dd>
+                    Saltar lazo
+                </dd>
+                <dt>
+                    Talla:
+                </dt>
+                <dd>
+                    4
+                </dd>
+                <dt>
+                    ¿Qúe quiere ser cuando grande?:
+                </dt>
+                <dd>
+                    Princesa
+                </dd>
+                <br>
+                <dt>
+                    Observaciones:
+                </dt>
+                <dd>
+                    No conoce al papá, vive con los abuelos y mamá; la dejan al cuidado de abuelos y tios mientras mamá trabaja.
+                </dd>
+                <br><br>
+            </dl>
+
+        </div>
+        <div class="col-md-6">
+            <img alt="#" src="../imgs/benef1.jpg" class="img-circle">
+        </div>
+    </div>
+    
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    </main>
+               <!--barra lateral-->
+<!-- menu lateral -->
+<aside>
+ <div class="foto-perfil">  <div class="imagen">
+   <img src="../imgs/dote.png"> </div>
+ </div>
+   <div class="menu-aside">
+   <a href="indexDonantes.html"> Módulo donantes</a>
+   <a href="registDonacionArticulof1.html"> Registrar donación en artículos</a>   
+   <a href="cargarDcnMonetariaF2.html">Registrar donación monetaria</a>
+   <a href="certificadoDonantef3.html">Certificado donante</a>
+   <a href="perfilBeneficiarios.html">Tus beneficiarios</a>
+   <a id="salir" href="#">Cerrar sesión</a>    
+   </div>
+</aside>
+ 
+    <script src="../js/jquery-1.12.2.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/formValidation.min.js"></script>
+    <script src="../js/bootstrap_validation.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('#ocultar-aside').on('click', function(){
+                $('aside').toggleClass('aside, aside-toggle');
+                $('main').toggleClass('main, main-toggle');
+            });
+        });
+    </script>
+
+<script>
+$().ready(function(){
+    $('#salir').click(function(){
+swal({   title: "Desea cerrar sesión?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../index.html");  } else {     swal("Cancelado", " ", "error");   }
+ });
+ });
+ });
+</script>
+</body>
+</html>

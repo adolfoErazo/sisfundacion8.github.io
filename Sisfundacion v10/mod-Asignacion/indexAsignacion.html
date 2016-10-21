@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Asignaciones</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="../imgs/mano.jpg">
+ 
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/posiciones.css">
+    
+    <link rel="stylesheet" href="../css/sweetalert.css">
+    
+    <script src="../js/jquery-1.12.2.min.js"></script>
+    
+    <script src="../js/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <a href="#" id="ocultar-aside"><i></i></a>
+        <!--aquí va todo del header-->
+    </header>
+    <main>
+        <!--Aquí va el contenido-->
+        <div class="col-md-5">
+        <ol class="breadcrumb">
+            <li><a href="../index.html">Inicio</a></li>
+            <li class="active">Módulo asignaciones</li>
+        </ol>
+        </div>
+        <br><br><center><h2>Este módulo permite el control y asignación de los recursos que ingresan a la Fundación.</h2>
+        <br><img src="../imgs/control.jpg" alt="control"></center>
+    </main>
+    <aside>
+    <!--aquí va todo de la barra lateral-->
+        <div class="foto-perfil">
+            <div class="imagen">
+            <img src="../imgs/asignacion.png">
+            </div>
+        </div>
+        <div class="menu-aside">
+            <a href="indexAsignacion.html">Módulo distribuciones</a>
+            <a href="Consultar recursos.html">Consultar recursos</a>
+            <a href="Asignar donaciones.html">Asignar donaciones</a>
+            <a href="Registrar ingreso de donaciones.html">Registrar ingreso de donaciones</a>
+            <a href="Ingreso de donaciones.html">Ingreso de donaciones</a>
+
+            <a href="Crear hojas de vida por familia.html">Crear hojas de vida por familia</a>
+
+            <a id="salir" href="#">Cerrar sesión</a>
+
+        </div>
+    </aside>
+ 
+<script> 
+swal("Bienvenidos al Módulo de Asignaciones")
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#ocultar-aside').on('click', function(){
+                $('aside').toggleClass('aside, aside-toggle');
+                $('main').toggleClass('main, main-toggle');
+            });
+        });
+    </script>
+
+<script>
+$().ready(function(){
+    $('#salir').click(function(){
+swal({   title: "Desea cerrar sesión?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../index.html");  } else { swal("Cancelado", " ", "error");   }
+ });
+ });
+ });
+</script>
+
+</body>
+</html>

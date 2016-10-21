@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Crear cuentas</title>
+   <link rel="Shortcut Icon" type="image/x-icon" href="../imgs/img_administrador.png">
+    <link rel="stylesheet" href="../css/posiciones.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/formValidation.min.css">
+     <link rel="stylesheet" href="../css/sweetalert.css">
+
+    <script src="../js/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <!--aquí va todo del header-->
+        <a href="#" id="ocultar-aside"><i></i></a>
+    </header>
+    <main>
+        <!--Aquí va el contenido-->
+        <ol class="breadcrumb">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="index administracion.html">Módulo Administración</a></li>
+            <li class="active">Crear cuenta</li>
+        </ol>
+        <div class="container">
+    <div class="row">
+        <form id="contactForm" class="form-horizontal">
+    <div class="form-group">
+        <center><h2>Creación cuentas de usuario</h2>
+        <hr>
+        <fieldset>
+        <label class="col-xs-2 control-label">Nombre completo</label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" name="firstName" placeholder="Nombres" onkeypress="return sololetras(event)" onpaste="return false" />
+        </div>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" name="lastName" placeholder="Apellidos" onkeypress="return sololetras(event)" onpaste="return false" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Documento de Identidad #</label>
+        <div class="col-xs-5">
+            <input type="number" class="form-control" name="numDocumento"  onkeypress="return solonumeros(event)"  onpaste="return false" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Tipo de documento</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="tipoDocumento"  onkeypress="return sololetras(event)" onpaste="return false"  />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-3 control-label">Género</label>
+                        <div class="col-lg-5">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="gender" value="male" /> Masculino
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="gender" value="female" /> Femenino
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+    
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Fecha de Nacimiento</label>
+        <div class="col-xs-5">
+            <input type="date" class="form-control" name="fechaNacimiento" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Correo electrónico</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="email" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Número telefónico</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="phoneNumber"   onkeypress="return solonumeros(event)"  onpaste="return false"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Dirección</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="direccion" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Ciudad de residencia</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="ciudad" onkeypress="return sololetras(event)" onpaste="return false" />
+        </div>
+    
+    </div>
+    
+    <div class="form-group">
+        <label class="col-xs-3 control-label" id="captchaOperation"></label>
+        <div class="col-xs-3">
+            <input type="text" class="form-control" name="captcha" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-9 col-xs-offset-3">
+            <button type="submit" class="btn btn-primary">Crear</button>
+        </div>
+    </div>
+</form>
+
+
+    </div>
+</div>
+
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/formValidation.min.js"></script>
+    <script src="../js/bootstrap_validation.min.js"></script>
+
+    <script>
+$(document).ready(function() {
+    // Generate a simple captcha
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    function generateCaptcha() {
+        $('#captchaOperation').html([randomNumber(1, 100), '+', randomNumber(1, 200), '='].join(' '));
+    }
+
+    generateCaptcha();
+
+    $('#contactForm')
+        .formValidation({
+            framework: 'bootstrap',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                firstName: {
+                    row: '.col-xs-4',
+                    validators: {
+                        notEmpty: {
+                            message: 'El nombre es requerido'
+                        }
+                    }
+                },
+                lastName: {
+                    row: '.col-xs-4',
+                    validators: {
+                        notEmpty: {
+                            message: 'El apellido es requerido'
+                        }
+                    }
+                },
+                numDocumento: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El número de documento es requerido'
+                        }
+                    }
+                },
+                tipoDocumento: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El tipo de documento es requerido, Debe especificar si es: Nit, cédula de ciudadanía, cédula de extranjería, tarjeta de identidad'
+                        }
+                    }
+                },
+                phoneNumber: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El número telefónico es requerido'
+                        },
+                        regexp: {
+                            message: 'El número telefónico debe contener solo números, espacio, -, (, ), + y .',
+                            regexp: /^[0-9\s\-()+\.]+$/
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El correo electrónico es requerido'
+                        },
+                        emailAddress: {
+                            message: 'Esta entrada de correo no es válida, debe contener @'
+                        }
+                    }
+                },
+                message: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The message is required'
+                        },
+                        stringLength: {
+                            max: 700,
+                            message: 'The message must be less than 700 characters long'
+                        }
+                    }
+                },
+                captcha: {
+                    validators: {
+                        callback: {
+                            message: 'Respuesta incorrecta',
+                            callback: function(value, validator, $field) {
+                                var items = $('#captchaOperation').html().split(' '),
+                                    sum   = parseInt(items[0]) + parseInt(items[2]);
+                                return value == sum;
+                            }
+                        }
+                    }
+                }
+            }
+        })
+        .on('err.form.fv', function(e) {
+            // Regenerate the captcha
+            generateCaptcha();
+        });
+});
+</script>   
+    <script>
+        function sololetras(e){
+            key=e.keyCode || e.which ;
+
+            teclado=String.fromCharCode(key) ;
+
+            letras="abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+
+            especiales="8-37-38-46";
+
+            teclado_especial=false ;
+
+            for(var i in especiales){
+
+                if(key==especiales){
+                    teclado_especial=true;
+                }
+            }
+
+            if(letras.indexOf(teclado)==-1 && !teclado_especial){
+                return false; 
+            }
+        }
+    </script>
+<script>
+        
+        function solonumeros(e){
+            key=e.keyCode || e.which ;
+
+            teclado=String.fromCharCode(key) ;
+
+            numeros="0123456789";
+
+            especiales="8-37-38-46";
+
+            teclado_especial=false ;
+
+            for(var i in especiales){
+
+                if(key==especiales){
+                    teclado_especial=true;
+                }
+            }
+
+            if(numeros.indexOf(teclado)==-1 && !teclado_especial){
+                return false; 
+            }
+        }
+    </script>
+
+    </main>
+    <aside>
+    <!--aquí va todo de la barra lateral-->
+        <div class="foto-perfil">
+            <div class="imagen">
+            <img src="../imgs/img_administrador.png">
+            </div>
+        </div>
+        <div class="menu-aside">
+            <a href="index administracion.html">Módulo administración</a>
+            <a href="crear.html">Crear cuentas de usuario</a>
+            <a href="modificar.html">Modificar cuentas de usuario</a>
+            <a href="eliminar.html">Eliminar cuentas de usuario</a>
+            <a href="reporte.html">Reporte estadistica de donaciones</a>
+            <a href="reporte2.html">Reporte gestión de donantes</a>
+            <a id="salir" href="#">Cerrar sesión</a>
+        </div>
+    </aside>
+ 
+    <script src="../js/jquery-1.12.2.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/formValidation.min.js"></script>
+    <script src="../js/bootstrap_validation.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('#ocultar-aside').on('click', function(){
+                $('aside').toggleClass('aside, aside-toggle');
+                $('main').toggleClass('main, main-toggle');
+            });
+        });
+    </script>
+            <script>
+$().ready(function(){
+    $('#salir').click(function(){
+swal({   title: "Desea cerrar sesión ?",     type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   cancelButtonText: "Cancelar",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {   window.open("../login.html");  } else {     swal("Cancelado", " ", "error");   }
+ });
+ });
+ });
+</script>
+</body>
+</html>
